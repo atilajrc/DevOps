@@ -1,10 +1,26 @@
+Criar diretorio com comando mk dir
+Dentro do diretorio
 git init
 git status
 git add .
 git commit -a -m "Mensagem"
+
+criar repositorio no GitHub e depois rodar o comando abaixo dentro do diretorio
 git remote add origin https://github.com/atilajrc/DevOps.git
 git branch -M main
-git config pull.rebase true
-git push -u origin main
-git checkout -b "teste"
+git config pull.rebase true - configuração padrão
+git push -u origin main ou git push
+
+trabalhando com branch
+git branch - consultar o branch atual
+git checkout -b "teste" - criar outro branch
+git checkout main - voltar para o branch main
+git merge teste - mescalar os 2
+
+outros
+git pull - buscar arquivos remotos
+git clone "url" nome_pasta_local
+git clean -f - remover arquivos
+git checkout .\nome_arquivo - zerar ultimas alterações
+
 
