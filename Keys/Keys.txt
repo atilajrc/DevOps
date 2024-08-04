@@ -1,0 +1,2 @@
+it config --global user.email "atilajrc@gmail.com"
+git config --global user.name "atilajrc"
