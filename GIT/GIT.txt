@@ -2,3 +2,7 @@ git init
 git status
 git add .
 git commit -a -m "Mensagem"
+git remote add origin https://github.com/atilajrc/DevOps.git
+git branch -M main
+git config pull.rebase true
+git push -u origin main
