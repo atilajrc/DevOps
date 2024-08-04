@@ -6,5 +6,5 @@ git remote add origin https://github.com/atilajrc/DevOps.git
 git branch -M main
 git config pull.rebase true
 git push -u origin main
-Teste
+git checkout -b "teste"
 
