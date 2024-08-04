@@ -16,8 +16,9 @@ git push -u origin main ou git push
 
 trabalhando com branch
 git branch - consultar o branch atual
-git checkout -b "teste" - criar outro branch
-git checkout main - voltar para o branch main
+git checkout -b "teste" main - criar outro branch baseado no main
+git checkout "branch" - mudar de branch
+antes de fazer um merge rodar um pull para atualizar a branch atual
 git merge teste - mescalar os 2
 
 outros
@@ -27,6 +28,7 @@ git clean -f - remover arquivos
 git checkout ./nome_arquivo - zerar ultimas alterações
 git log - log geral
 git reflog - log de referencia do projeto
+git reset --hard "referencia" - navegar entre as versões do codigo
 
 
 
