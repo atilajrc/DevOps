@@ -1,3 +1,6 @@
+git config --global user.email "atilajrc@gmail.com"
+git config --global user.name "atilajrc"
+
 Criar diretorio com comando mk dir
 Dentro do diretorio
 git init
@@ -21,6 +24,8 @@ outros
 git pull - buscar arquivos remotos
 git clone "url" nome_pasta_local
 git clean -f - remover arquivos
-git checkout .\nome_arquivo - zerar ultimas alterações
+git checkout ./nome_arquivo - zerar ultimas alterações
+git log - log geral
+
 
 
