@@ -26,6 +26,8 @@ git clone "url" nome_pasta_local
 git clean -f - remover arquivos
 git checkout ./nome_arquivo - zerar ultimas alterações
 git log - log geral
+git reflog - log de referencia do projeto
+
 
 
 
