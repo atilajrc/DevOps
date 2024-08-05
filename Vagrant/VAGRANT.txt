@@ -16,6 +16,9 @@ vagrant(){
 criar o arquivo Vagrantfile
 vagrant init -m generic/ubuntu2204
 
+valida o arquivo
+vagrant validate
+
 subir a maquina virtual
 vagrant up
 
