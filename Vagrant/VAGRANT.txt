@@ -1,0 +1,39 @@
+rodar container com suporte a libvirt
+colocar a informação abaixo no arquivo .bashrc
+
+vagrant(){
+  docker run -it --rm \
+    -e LIBVIRT_DEFAULT_URI \
+    -v /var/run/libvirt/:/var/run/libvirt/ \
+    -v ~/.vagrant.d:/.vagrant.d \
+    -v $(realpath "${PWD}"):${PWD} \
+    -w "${PWD}" \
+    --network host \
+    vagrantlibvirt/vagrant-libvirt:latest \
+      vagrant $@
+}
+
+criar o arquivo Vagrantfile
+vagrant init -m generic/ubuntu2204
+
+subir a maquina virtual
+vagrant up
+
+excluir a maquina virtual
+vagrant destroy -f
+
+verficar config ssh
+vagrant ssh-config
+
+desligar a maquina
+vagrant halt
+
+verificar status da maquina
+vagrant status
+
+ligar a maquina 
+vagrant up
+
+executar comando na maquina
+vagrant ssh server1 -c "cat /etc/*release"
+
