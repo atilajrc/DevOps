@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Update e Upgrade
-sudo apt update
-sudo apt upgrade -y
+sudo apk update
+sudo apk upgrade
 
 #apps
-sudo apt install --no-instal-recommends net-tools neofetch btop -y
+sudo apk add neofetch net-tools btop
