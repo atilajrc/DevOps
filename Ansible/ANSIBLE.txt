@@ -1,0 +1,15 @@
+ansible --version
+mkdir /etc/ansible
+sudo nano /etc/ansible/hosts
+ansible-config init --disabled > ansible.cfg
+sudo nano /etc/ansible/ansible.cfg
+sudo ssh-keygen -q -t rsa -f /vagrant/key -N ''
+sudo cat key.pub
+nano .ssh/authorized_keys
+ansible all -m ping
+ansible-doc -l
+ansible-doc -s apk
+ansible client -m shell -a "free -m"
+ansible client -m apk -a "name=ncdu state=present update_cache=yes" --become
+ansible client -m setup
+ansible client -m setup -a "filter=ansible_distribution"
