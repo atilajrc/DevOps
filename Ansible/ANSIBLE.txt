@@ -28,3 +28,8 @@ ansible client -m shell -a "free -m"
 ansible client -m apk -a "name=ncdu state=present update_cache=yes" --become
 ansible client -m setup
 ansible client -m setup -a "filter=ansible_distribution"
+ansible all -m apk -a "update_cache=yes upgrade=yes" --become
+ansible server -m service -a "name=crond state=stopped" --become
+ansible server -m service -a "name=crond state=started" --become
+ansible all -m shell -a "getent passwd vagrant"
+

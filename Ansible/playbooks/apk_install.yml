@@ -1,0 +1,18 @@
+- name: Instalar Pacotes
+  hosts: all
+  tasks:
+    - name: instalar Pacotes
+      become: true
+      apk:
+        name:  "{{ item }}"
+      loop:
+        - neofetch
+        - net-tools
+        - btop
+        - wget
+        - curl
+        - nano
+        - ncftp
+        - git
+        - python3
+      when: ansible_distribution == "Alpine"

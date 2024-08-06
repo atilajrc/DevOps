@@ -1,0 +1,11 @@
+#Playbook para tranferir arquivos
+
+- name: Playbook de Transferir Arquivos
+  hosts: server
+  tasks:
+
+  - name: enviar arquivo
+    become: true
+    copy:
+      src: teste.txt
+      dest: /home/vagrant/teste_000.txt
