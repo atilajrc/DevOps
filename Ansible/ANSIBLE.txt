@@ -1,11 +1,26 @@
+#verificar a versao
 ansible --version
+
+#criar o diretorio onde ficara os arquivos de configuração
 mkdir /etc/ansible
+
+#criar diretorio com os hosts
 sudo nano /etc/ansible/hosts
+
+#comando para criar o arquivo de configuração inicial
 ansible-config init --disabled > ansible.cfg
+
+#local e nome do arquivo de configuração
 sudo nano /etc/ansible/ansible.cfg
+
+#gerar a chave ssh
 sudo ssh-keygen -q -t rsa -f /vagrant/key -N ''
+
+#chave publica que devera ser copiada para os micros no arquivo .ssh/authorized_keys
 sudo cat key.pub
 nano .ssh/authorized_keys
+
+#comandos ansible
 ansible all -m ping
 ansible-doc -l
 ansible-doc -s apk

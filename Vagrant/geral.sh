@@ -4,8 +4,9 @@
 sudo apk update
 sudo apk upgrade
 
-#Apps
-sudo apk add neofetch net-tools btop wget curl nano ncftp git
+#Install Apps
+sudo apk add neofetch net-tools btop wget curl nano ncftp git python3
 
 #Copiar Chave SSH Ansible
 cat key.pub >> /home/vagrant/.ssh/authorized_keys
+rm key.pub
