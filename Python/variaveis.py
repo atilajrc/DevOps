@@ -7,7 +7,7 @@ n1 = n2 = n3 = n4 = 0.0
 print(media)
 print(n2)
 
-nome, idade = 'Atila', 47
+nome, idade = 'Atila Costa', 47
 
 # Função type()
 print(type(media))
