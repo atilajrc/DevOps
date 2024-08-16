@@ -15,7 +15,7 @@ git config pull.rebase true - configuração padrão
 git push -u origin main ou git push
 
 trabalhando com branch
-git branch - consultar o branch atual
+git branch - consultar o branch atua
 git checkout -b "teste" main - criar outro branch baseado no main
 git checkout "branch" - mudar de branch
 antes de fazer um merge rodar um pull para atualizar a branch atual
