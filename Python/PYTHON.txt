@@ -1,0 +1,6 @@
+#Criar o container com a imagem python dentro da pasta atual
+docker run -it -v ${PWD}:/app python
+
+#Compila nova imagem do container com o arquivo dockerfile que esta no diretorio local
+docker build -t python_app .
+
