@@ -1,0 +1,6 @@
+[server]
+10.0.0.100 ansible_user=vagrant ansible_ssh_pass=vagrant
+
+[client]
+10.0.0.101 ansible_user=vagrant ansible_ssh_pass=vagrant
+10.0.0.102 ansible_user=vagrant ansible_ssh_pass=vagrant

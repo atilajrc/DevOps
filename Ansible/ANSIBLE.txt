@@ -21,6 +21,7 @@ sudo cat key.pub
 nano .ssh/authorized_keys
 
 #comandos ansible
+server:~$ ansible all -m shell -a "hostname"
 ansible all -m ping
 ansible-doc -l
 ansible-doc -s apk
@@ -32,4 +33,4 @@ ansible all -m apk -a "update_cache=yes upgrade=yes" --become
 ansible server -m service -a "name=crond state=stopped" --become
 ansible server -m service -a "name=crond state=started" --become
 ansible all -m shell -a "getent passwd vagrant"
-
+ansible all -m ping --ask-pass

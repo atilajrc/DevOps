@@ -1,0 +1,6 @@
+Vagrant.configure(2) do |config|
+	config.vm.provider "docker" do |d|
+		d.image = "dockette/vagrant:debian-12"
+		d.has_ssh = true
+	end
+end

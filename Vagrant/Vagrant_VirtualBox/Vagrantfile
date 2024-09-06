@@ -1,0 +1,42 @@
+machines = {
+  "server" => {"memory" => "1024", "cpu" => "2", "ip" => "100", "image" => "generic/alpine318"},
+  "node01" => {"memory" => "1024", "cpu" => "2", "ip" => "101", "image" => "generic/alpine318"},
+  "node02" => {"memory" => "1024", "cpu" => "2", "ip" => "102", "image" => "generic/alpine318"}
+}
+
+Vagrant.configure("2") do |config|
+
+  machines.each do |name, conf|
+    config.vm.define "#{name}" do |machine|
+      machine.vm.box = "#{conf["image"]}"
+      machine.vm.hostname = "#{name}"
+      machine.vm.network "private_network", ip: "10.0.0.#{conf["ip"]}"
+      machine.vm.provider "virtualbox" do |vb|
+        vb.memory = conf["memory"]
+        vb.cpus = conf["cpu"]
+      end
+      
+ 
+      if "#{conf["image"]}" == "generic/alpine318"
+        #machine.vm.provision "file", source: "key.pub", destination: "key.pub"
+        machine.vm.provision "shell", path: "geral.sh"
+     end
+
+      if "#{name}" == "server"
+        #machine.vm.provision "file", source: "key", destination: "key"
+        machine.vm.provision "file", source: "hosts", destination: "hosts"
+        machine.vm.provision "file", source: "ansible.cfg", destination: "ansible.cfg"
+        machine.vm.provision "shell", path: "server.sh"
+     end
+
+      if "#{name}" == "node01"
+        machine.vm.provision "shell", path: "node01.sh"
+     end
+
+      if "#{name}" == "node02"
+        machine.vm.provision "shell", path: "node02.sh"
+     end
+ 
+    end
+  end
+end
