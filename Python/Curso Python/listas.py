@@ -1,6 +1,7 @@
 vendas = [100, 50, 130, 80, 120, 200]
 
 print(vendas[0])
+print(vendas[-1])
 
 total_vendas = sum(vendas)
 print(total_vendas)
