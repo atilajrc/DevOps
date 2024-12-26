@@ -31,6 +31,4 @@ git reflog - log de referencia do projeto
 git reset --hard "referencia" - navegar entre as versões do codigo
 touch .gitignore - criar arquivo onde vai ser listadas as pastas que nao serão atualizadas
 
-Teste
-
 
