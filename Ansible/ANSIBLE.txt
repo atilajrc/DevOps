@@ -35,3 +35,4 @@ ansible server -m service -a "name=crond state=started" --become
 ansible all -m shell -a "getent passwd vagrant"
 ansible all -m ping --ask-pass
 
+testeteste
